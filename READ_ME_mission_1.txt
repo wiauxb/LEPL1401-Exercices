@@ -1,0 +1,1 @@
+ exécutez le programme "mise_en_route.py" afin d'afficher une table des carrés (colonne 2) et des sommes des carrés (colonne 3 et 4)
