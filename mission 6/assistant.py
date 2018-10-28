@@ -6,7 +6,7 @@ def load(file):
         return None
 
 command = input("> ")
-fichier = ""
+fichier = None
 while command != "exit":
     command = command.split(" ")
     
@@ -18,10 +18,18 @@ while command != "exit":
             print("Loaded {}".format(command[1]))
     
     elif command [0] == "info":
-        if fichier == "":
+        if fichier == None:
             print("pas de fichier chargé")
+        elif fichier == "":
+            print("fichier vide")
         else:
-            print("{0} lignes\n{0} caractères".format(4))
+            print("{} lignes\n{} caractères".format(len(fichier.split("\n")),len(fichier)-len(fichier.split("\n"))+1))
+
+    elif command[0] == "dictionary":
+        print(fichier)
+        fichier = dict(fichier)
+        print(fichier)
+        #ValueError
             
     else:
         print("{} n'est pas une commmande valide".format(command[0]))
