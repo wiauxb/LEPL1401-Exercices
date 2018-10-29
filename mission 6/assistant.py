@@ -57,7 +57,26 @@ while command != "exit":
         else:
             mot = search(command[1],sorted([i.split(",") for i in fichier.split("\n")][:-1]))
             print("le mot le plus proche est {}".format(mot))
-            
+
+    elif command[0] == "sum":
+        print(sum([int(i) for i in command[1:]]))
+
+    elif command[0] == "avg":
+        print(sum([int(i) for i in command[1:]])/len(command[1:]))
+
+    elif command[0] == "help":
+        com = ["file","info","dictionary","search","sum","avg","help"]
+        expl = ["file <name>: spécifie le nom d'un fichier sur lequel l'outil doit travailler",\
+        "montre le nombre de lignes et de caractères du fichier",\
+        "utilise le fichier comme dictionnaire à partir de maintenant",\
+        "search <word>: cherche le mot le plus similaire au mot spécifié dans le dictionnaire",\
+        "sum <number1> ... <numbern>: calcule la somme des nombres spécifiés",\
+        "avg <number1> ... <numbern>: calcule la moyenne des nombres spécifiés",\
+        "montre des instructions à l'utilisateur",\
+        "arrête l'outil"]
+        for i in range(len(com)-1):
+            print("{}\t{}".format(com[i],expl[i]))
+        
     else:
         print("{} n'est pas une commmande valide".format(command[0]))
     command = input("> ")
