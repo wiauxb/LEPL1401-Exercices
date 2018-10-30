@@ -1,3 +1,5 @@
+#Vraux Igor et Wiaux Bastien
+
 def load(file):
     try:
         with open(file,'r') as fichier:
@@ -78,7 +80,7 @@ while command != "exit":
             print("Erreur: précisez au moins un nombre")
 
     elif command[0] == "help":
-        com = ["file","info","dictionary","search","sum","avg","help"]
+        com = ["file","info","dictionary","search","sum","avg","help","exit"]
         expl = ["file <name>: spécifie le nom d'un fichier sur lequel l'outil doit travailler",\
         "montre le nombre de lignes et de caractères du fichier",\
         "utilise le fichier comme dictionnaire à partir de maintenant",\
@@ -87,7 +89,7 @@ while command != "exit":
         "avg <number1> ... <numbern>: calcule la moyenne des nombres spécifiés",\
         "montre des instructions à l'utilisateur",\
         "arrête l'outil"]
-        for i in range(len(com)-1):
+        for i in range(len(com)):
             print("{}\t{}".format(com[i],expl[i]))
         
     else:
