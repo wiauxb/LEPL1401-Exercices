@@ -29,11 +29,14 @@ while command != "exit":
     command = command.split(" ")
     
     if command [0] == "file":
-        fichier = load(command[1])
-        if fichier == None:
-            print("Erreur: Fichier inexistant")
-        else:
-            print("Chargé {}".format(command[1]))
+        try:
+            fichier = load(command[1])
+            if fichier == None:
+                print("Erreur: Fichier inexistant")
+            else:
+                print("Chargé {}".format(command[1]))
+        except IndexError:
+            print("Erreur: Précisez un fichier")
     
     elif command [0] == "info":
         if fichier == None:
@@ -46,10 +49,9 @@ while command != "exit":
     elif command[0] == "dictionary":
         if fichier == None:
             print("pas de fichier chargé")
-        fichier = sorted([i.split(",") for i in fichier.split("\n")][:-1])
-        with open("dict.dat",'w') as d:
-            d.write(str(fichier))
-        print("Lit le fichier comme un dictionnaire")
+        else:
+            fichier = sorted([i.split(",") for i in fichier.split("\n")][:-1])
+            print("Lit le fichier comme un dictionnaire")
 
     elif command[0] == "search":
         if fichier == None:
@@ -59,10 +61,21 @@ while command != "exit":
             print("le mot le plus proche est {}".format(mot))
 
     elif command[0] == "sum":
-        print(sum([int(i) for i in command[1:]]))
+        if len(command[1:]) == 0:
+            print("Erreur: précisez au moins un nombre")
+        else:
+            try:
+                print(sum([int(i) for i in command[1:]]))
+            except ValueError:
+                print("Erreur: nombre non valide")
 
     elif command[0] == "avg":
-        print(sum([int(i) for i in command[1:]])/len(command[1:]))
+        try:
+            print(sum([int(i) for i in command[1:]])/len(command[1:]))
+        except ValueError:
+            print("Erreur: nombre non valide")
+        except ZeroDivisionError:
+            print("Erreur: précisez au moins un nombre")
 
     elif command[0] == "help":
         com = ["file","info","dictionary","search","sum","avg","help"]
