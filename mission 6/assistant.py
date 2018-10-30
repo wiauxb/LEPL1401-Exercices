@@ -22,7 +22,7 @@ def search(mot,fichier): #utilisation de la fonction binary-research modifiée
             else:
                 first = middle+1
     if not found:
-        proche = fichier[middle][0]
+        proche = fichier[middle+1][0]
     return proche
 
 command = input("> ")
@@ -52,14 +52,32 @@ while command != "exit":
         if fichier == None:
             print("pas de fichier chargé")
         else:
-            fichier = sorted([i.split(",") for i in fichier.split("\n")][:-1])
-            print("Lit le fichier comme un dictionnaire")
+            lst1 = fichier.split("\n")
+            while lst1[-1] == "":
+                lst1 = lst1[:-1]
+            fichier = []
+            for i in lst1:
+                if len(i.split(",")) < 2:
+                    print(i.split(","))
+                    print("Le fichier n'est pas lisible comme dictionnaire")
+                else:
+                    if type(i.split(",")[0]) == str and i.split(",")[1].isnumeric():
+                        fichier.append(i.split(",") )
+                    else:
+                        print(i.split(","))
+                        print("Le fichier n'est pas lisible comme dictionnaire")
+                        break
+                    if len(fichier) == len(lst1):
+                        fichier.sort()
+                        print("Lit le fichier comme un dictionnaire")
 
     elif command[0] == "search":
         if fichier == None:
-            print("pas de fichier chargé")
+            print("Pas de fichier chargé")
+        elif type(fichier) is not list:
+            print("Veuillez d'abord convertir en dictionnaire")
         else:
-            mot = search(command[1],sorted([i.split(",") for i in fichier.split("\n")][:-1]))
+            mot = search(command[1],fichier)
             print("le mot le plus proche est {}".format(mot))
 
     elif command[0] == "sum":
@@ -67,13 +85,13 @@ while command != "exit":
             print("Erreur: précisez au moins un nombre")
         else:
             try:
-                print(sum([int(i) for i in command[1:]]))
+                print(sum([float(i) for i in command[1:]]))
             except ValueError:
                 print("Erreur: nombre non valide")
 
     elif command[0] == "avg":
         try:
-            print(sum([int(i) for i in command[1:]])/len(command[1:]))
+            print(sum([float(i) for i in command[1:]])/len(command[1:]))
         except ValueError:
             print("Erreur: nombre non valide")
         except ZeroDivisionError:
