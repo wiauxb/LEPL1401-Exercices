@@ -1,2 +1,5 @@
-couille
-e
+un,2
+petit,8
+test,0
+de,5
+dictionnaire,23
