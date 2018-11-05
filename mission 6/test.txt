@@ -1,5 +1,4 @@
-un,2
-petit,8
-test,0
-de,5
-dictionnaire,23
+Directeur : Albus Dumbledore
+(Ordre de Merlin, Première classe, Grand Sorc., Chf. Démoniste, Suprême Mugwump, Confédéré international. des sorciers)
+
+Cher M./Mme 
