@@ -1,8 +1,10 @@
 def readfile(filename):
-    return ["While the Congress of the Republic endlessly debates",\
-            "this alarming chain of events, the Supreme Chancellor has",\
-            "secretly dispatched two Jedi Knights."]
-
+    f = open(filename, "r")
+    line_list = []
+    for line in f:
+        a = line.split("\n")
+        line_list.append(a[0])
+    return line_list
 
 def positions(text,car):
     """
@@ -50,4 +52,17 @@ def create_index(filename):
                     dct[mot] = {index:1}
     return dct
 
-print(create_index("warg"))
+def get_lines(words):        # argument index pas necessaire
+    cnt = 0
+    index = []
+    for x in range(len(readfile(r"C:\Users\DELL\Documents\Uni\Informatique\Missions\TEST_FILE_mission_7.txt"))):
+        a = get_words(x)
+        for y in words:
+            if y in a:
+                cnt += 1
+        if cnt == len(words):
+            index.append(x)
+        cnt = 0
+    return index
+	
+print(get_lines("force"))
