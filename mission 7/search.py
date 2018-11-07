@@ -1,4 +1,8 @@
 def readfile(filename):
+    """
+    pre: prend un un filename
+    post:retourne une liste avec les lignes du fichier en filename
+    """
     f = open(filename, "r")
     line_list = []
     for line in f:
@@ -21,11 +25,19 @@ def positions(text,car):
     return index
 
 def clean(mot,p):
+    """
+    pre: prend un 2 strings mot,p
+    post:retourne mot dans lequel on a retirer tout les p
+    """
     for i in positions(mot,p):
         mot = mot[:i]+mot[i+1:]
     return mot
 
 def get_words(line):
+    """
+    pre: prend un strings en argument
+    post:retourne une liste avec les mots du string
+    """
     lst = []
     for mot in line.strip().lower().split(" "):
         
@@ -47,7 +59,7 @@ def get_words(line):
 def create_index(filename):
     """
     pre: prend un chemin filename vers un fichier texte
-    post: retourne un index pour le fichier avec nom filename
+    post: retourne un index (dictionnaire) pour le fichier de filename
     """
     words = [get_words(l) for l in readfile(filename)]
     dct = {}
@@ -62,7 +74,11 @@ def create_index(filename):
                     dct[mot] = {index:1}
     return dct
 
-def get_lines(words,index): 
+def get_lines(words,index):
+    """
+    pre: prend une liste et un dictionnaire words,index
+    post:retourne une liste avec le(s) index(s) de(s) ligne(s) dans le(s)quel(s) on trouve tous les mots de la liste words
+    """
     ligne = index.get(words[0],[])
     temp = dict(ligne)                      #variable temporaire pour ne pas modifier ligne alors qu'on la parcours
     for mot in words[1:]:
@@ -75,6 +91,3 @@ def get_lines(words,index):
             ligne = []
             break
     return [i for i in ligne]
-
-#print(create_index("episodeIV_dialogues.txt"))
-print(create_index("test.txt"))
