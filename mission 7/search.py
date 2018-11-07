@@ -28,6 +28,16 @@ def clean(mot,p):
 def get_words(line):
     lst = []
     for mot in line.strip().lower().split(" "):
+        
+        if "\t" in mot:
+            for i in positions(mot,"\t"):
+                tab = mot[:i]
+                for ponct in [".",",",":","?","!","/",";"]:
+                    if ponct in tab:
+                        tab = clean(tab,ponct)
+                lst.append(tab.lower())
+                mot = mot[i+1:]
+            
         for ponct in [".",",",":","?","!","/",";"]:
             if ponct in mot:
                 mot = clean(mot,ponct)
@@ -36,7 +46,7 @@ def get_words(line):
 
 def create_index(filename):
     """
-    pre: prend un chemin filename verss un fichier texte
+    pre: prend un chemin filename vers un fichier texte
     post: retourne un index pour le fichier avec nom filename
     """
     words = [get_words(l) for l in readfile(filename)]
@@ -52,17 +62,19 @@ def create_index(filename):
                     dct[mot] = {index:1}
     return dct
 
-def get_lines(words):        # argument index pas necessaire
-    cnt = 0
-    index = []
-    for x in range(len(readfile(r"C:\Users\DELL\Documents\Uni\Informatique\Missions\TEST_FILE_mission_7.txt"))):
-        a = get_words(x)
-        for y in words:
-            if y in a:
-                cnt += 1
-        if cnt == len(words):
-            index.append(x)
-        cnt = 0
-    return index
-	
-print(get_lines("force"))
+def get_lines(words,index): 
+    ligne = index.get(words[0],[])
+    temp = dict(ligne)                      #variable temporaire pour ne pas modifier ligne alors qu'on la parcours
+    for mot in words[1:]:
+        if mot in index:
+            for i in ligne:
+                if i not in index[mot]:
+                    del temp[i]
+            ligne = dict(temp)
+        else:
+            ligne = []
+            break
+    return [i for i in ligne]
+
+#print(create_index("episodeIV_dialogues.txt"))
+print(create_index("test.txt"))
