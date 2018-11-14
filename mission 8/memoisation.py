@@ -1,12 +1,18 @@
-import time as t
+import time
 import turtle as t
 
+count = [0,0,0]
+
 def fibo(n):
+	global count
+	count[0] += 1
 	if n <= 1:
 		return n 
 	return fibo(n-2)+fibo(n-1)
 		
 def fibonacci(n):
+	global count
+	count[1] += 1
 	rep = [0,1]
 	if n >= 2:
 		for i in range(n-1):
@@ -21,42 +27,69 @@ def chrono_abs():
 	try:
 		while temps < 10:
 			n += 1
-			t.clock()
+			time.clock()
 			fibonacci(n)
-			temps = t.clock()
+			temps = time.clock()
 	finally:
 		return (temps,n)
 		
 
-def chrono(n):
-	t.clock()
-	fibo(n)
-	return t.clock()
+def chrono(fct,n):
+	time.clock()
+	fct(n)
+	return time.clock()
 
-def draw_bar(t, height):
+def draw_bar(t, height,echelle = 1):
     """ Get turtle t to draw one bar, of height. """
     t.begin_fill()           # Added this line
     t.left(90)
-    t.forward(height)
-    t.write("  "+ str(int(height*1000)))
+    t.forward(height*echelle)
+    t.write("  "+ str(int(height)))
     t.right(90)
-    t.forward(40)
+    t.forward(25)
     t.right(90)
-    t.forward(height)
+    t.forward(height*echelle)
     t.left(90)
     t.end_fill()             # Added this line
-    t.forward(5)	
+    t.forward(3)	
 
-wn = t.Screen()
+"""wn = t.Screen()
 tess = t.Turtle()
+tess.speed("fastest")
+tess.hideturtle()
 tess.pu()
-tess.backward(800)
-tess.right(90)
-tess.forward(450)
-tess.left(90)
+tess.goto(-850,-450)
 tess.pd()
+alex = tess.clone()
+alex.color("red")
 	
 for n in range(31):
-	draw_bar(tess,fibonacci(n)/1000)
+	count = [0,0,0]
+	tess.color("black")
+	fibo(n)
+	draw_bar(tess,count[0],1/2500)
+	fibonacci(n)
+	draw_bar(alex,count[1])
 
-wn.mainloop()
+tess.color("green")
+tess.pu()
+tess.goto(50,-450)
+tess.pd()
+
+for n in range(31):
+	draw_bar(tess,fibo(n),1/1000)
+
+tess.color("black")
+tess.pu()
+alex.pu()
+tess.goto(50,0)
+alex.goto(50,20)
+tess.pd()
+alex.pd()"""
+
+for n in range(31):
+	#draw_bar(tess,chrono(fibo,n))
+	#draw_bar(alex,chrono(fibonacci,n))
+	print(chrono(fibonacci,7000),"\t",chrono(fibonacci,7000),"\t",chrono(fibonacci,7000))
+
+#wn.mainloop()
