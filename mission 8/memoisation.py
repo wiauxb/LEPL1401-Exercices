@@ -35,16 +35,16 @@ def chrono_abs():
 		
 
 def chrono(fct,n):
-	time.clock()
+	tp = time.clock()
 	fct(n)
-	return time.clock()
+	return time.clock()-tp
 
 def draw_bar(t, height,echelle = 1):
     """ Get turtle t to draw one bar, of height. """
     t.begin_fill()           # Added this line
     t.left(90)
     t.forward(height*echelle)
-    t.write("  "+ str(int(height)))
+    t.write("  "+ str(float(height)))
     t.right(90)
     t.forward(25)
     t.right(90)
@@ -53,7 +53,7 @@ def draw_bar(t, height,echelle = 1):
     t.end_fill()             # Added this line
     t.forward(3)	
 
-"""wn = t.Screen()
+wn = t.Screen()
 tess = t.Turtle()
 tess.speed("fastest")
 tess.hideturtle()
@@ -85,11 +85,13 @@ alex.pu()
 tess.goto(50,0)
 alex.goto(50,20)
 tess.pd()
-alex.pd()"""
+alex.pd()
 
 for n in range(31):
-	#draw_bar(tess,chrono(fibo,n))
-	#draw_bar(alex,chrono(fibonacci,n))
-	print(chrono(fibonacci,7000),"\t",chrono(fibonacci,7000),"\t",chrono(fibonacci,7000))
+	a = chrono(fibo,n)
+	b = chrono(fibonacci,n)
+	draw_bar(tess,a)
+	draw_bar(alex,b)
+	print(a,"\t",b)
 
-#wn.mainloop()
+wn.mainloop()
