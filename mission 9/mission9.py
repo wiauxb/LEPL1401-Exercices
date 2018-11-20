@@ -74,6 +74,7 @@ class Album:
         else:
             self.alb.append(chanson)
             self.total_d.ajouter(chanson.duree)
+            return True
         
     def __str__(self):
         texte = "Album {} ({} chansons, {})".format(self.n,len(self.alb),self.total_d)
@@ -81,3 +82,24 @@ class Album:
             texte += "\n{:02}: {}".format(i+1,self.alb[i])
             
         return texte
+        
+def lecture(filename):
+    chansons = []
+    try:
+        with open(filename,"r") as f:
+            for l in f:
+                i = l.strip().split(" ")
+                chansons.append(Chanson(i[0],i[1],Duree(0,int(i[2]),int(i[3]))))
+    except FileNotFoundError:
+        print("fichier non valide")
+    albums = [Album(1)]
+    point = 0
+    for i in chansons:
+        if not albums[point].add(i):
+            point += 1
+            albums.append(Album(point+1))
+            albums[point].add(i)
+    for i in albums:
+        print("{}\n".format(i))
+
+lecture("music-db.txt")
