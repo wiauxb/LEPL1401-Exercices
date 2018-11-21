@@ -1,7 +1,8 @@
 class Duree:
     def __init__(self,h,m,s):
         if h//24 != 0 or m//60 != 0 or s//60 != 0:
-            raise ValueError("une durée doit se donner en heures,minutes,secondes en respectant les intervals")
+            print("une durée doit se donner en heures,minutes,secondes en respectant les intervals")
+            return
         self.time = h*3600+m*60+s
         
     def toSecondes(self) :
@@ -48,7 +49,8 @@ class Duree:
 class Chanson:
     def __init__(self,t,a,d):
         if type(t) != str or type(a) != str or type(d) != Duree:
-            raise TypeError("mauvais type")
+            print("mauvais type")
+            return
         self.titre = t
         self.artiste = a
         self.duree = d
@@ -67,8 +69,14 @@ class Album:
         self.total_d = Duree(0,0,0)
         
     def add(self,chanson):
+       """
+       Ajoute une chanson à cette instance de Album (self).
+       retourne False si lors de l'ajout d'une chanson l'album a atteint 100 chansons ou la durée dépasserait 75 minutes.
+       Sinon la chanson est rajoutée et la méthode add retourne True.
+       """
         if type(chanson) != Chanson:
-            raise TypeError("la chanson doit être de type chanson")
+            print("la chanson doit être de type chanson")
+            return
         elif len(self.alb) == 99 or self.total_d.toSecondes() + chanson.duree.toSecondes() > 75*60:
             return False
         else:
@@ -77,6 +85,14 @@ class Album:
             return True
         
     def __str__(self):
+        """
+        Retourne un String décrivant cet album sous le format
+        "Album n (nombre de titre, duree totale)
+        TITRE - AUTEUR - DUREE
+        TITRE - AUTEUR - DUREE
+        TITRE - AUTEUR - DUREE
+        TITRE - AUTEUR - DUREE".
+        """
         texte = "Album {} ({} chansons, {})".format(self.n,len(self.alb),self.total_d)
         for i in range(len(self.alb)):
             texte += "\n{:02}: {}".format(i+1,self.alb[i])
@@ -84,6 +100,15 @@ class Album:
         return texte
         
 def lecture(filename):
+    """
+    pre: le fichier respecte le format "TITRE AUTEUR MIN SEC"
+    par exemple:
+    Let's_Dance David_Bowie 4 5
+    Relax Frankie_Goes_To_Hollywood 3 54
+    Purple_Rain Prince 5 48
+    Enjoy_The_Silence Depeche_Mode 4 13
+    post: lit le fichier filename et print des albums ordonnés
+    """
     chansons = []
     try:
         with open(filename,"r") as f:
@@ -92,6 +117,7 @@ def lecture(filename):
                 chansons.append(Chanson(i[0],i[1],Duree(0,int(i[2]),int(i[3]))))
     except FileNotFoundError:
         print("fichier non valide")
+        return
     albums = [Album(1)]
     point = 0
     for i in chansons:
