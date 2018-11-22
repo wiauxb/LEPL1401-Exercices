@@ -74,15 +74,15 @@ class Album:
        retourne False si lors de l'ajout d'une chanson l'album a atteint 100 chansons ou la durée dépasserait 75 minutes.
        Sinon la chanson est rajoutée et la méthode add retourne True.
        """
-        if type(chanson) != Chanson:
-            print("la chanson doit être de type chanson")
-            return
-        elif len(self.alb) == 99 or self.total_d.toSecondes() + chanson.duree.toSecondes() > 75*60:
-            return False
-        else:
-            self.alb.append(chanson)
-            self.total_d.ajouter(chanson.duree)
-            return True
+       if type(chanson) != Chanson:
+           print("la chanson doit être de type chanson")
+           return
+       elif len(self.alb) == 99 or (self.total_d.toSecondes() + chanson.duree.toSecondes() > 75*60):
+           return False
+       else:
+           self.alb.append(chanson)
+           self.total_d.ajouter(chanson.duree)
+           return True
         
     def __str__(self):
         """
