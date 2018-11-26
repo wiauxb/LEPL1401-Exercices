@@ -1,5 +1,6 @@
 from article import Article
 from facture import Facture
+from mission10 import *
 
 """
    Classe de test initiale pour la classe Facture.
