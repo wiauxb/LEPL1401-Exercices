@@ -51,4 +51,4 @@ class Article :
         """
         Retourne un texte decrivant cet article, au format: "{description}: {prix}"
         """
-        return "{0}: {1:.2f}".format(self.get_description, self.get_prix())
+        return "{0}: {1:.2f}".format(self.description(), self.prix())

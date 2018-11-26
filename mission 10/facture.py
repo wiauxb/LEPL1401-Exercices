@@ -75,17 +75,11 @@ class Facture :
         b += "| {0:40} | {1:10.2f} | {2:10.2f} | {3:10.2f} |\n".format("T O T A L", prix, tva, prix+tva)
         b += self.barre_str()
         return b
-        
-    # This method needs to be added during Etape 4 of the mission
-    def nombre(self, pce) :
-        """
-        Retourne le nombre d'exemplaires de la pièce pce dans la facture, en totalisant sur tous les articles qui concernent cette pièce.
-        """
-        pass
 
     # This method needs to be added during Etape 5 of the mission
     def livraison_str(self):
         """
         Cette méthode est une méthode auxiliaire pour la méthode printLivraison
         """
-
+        pass
+        
