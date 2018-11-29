@@ -39,8 +39,8 @@ class Piece:
     def tva_reduit(self):
         return self.tva_reduit
         
-    def __eq__(self):
-        return (self.nom, self.prix)
+    def __eq__(self,other):
+        return (self.nom, self.prix) == (other.nom, other.prix)
     
 class ArticlePiece(Article):
     
