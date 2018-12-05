@@ -1,7 +1,7 @@
 import random
 import time
-from coureur    import Coureur
-from classement import Classement
+from mission11    import Coureur
+from mission11 import Classement
 from temps      import Temps
 from resultat   import Resultat
 

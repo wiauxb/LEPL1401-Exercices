@@ -39,7 +39,37 @@ class Coureur:
     score = property(get_score,set_score)
 
 class Classement:
-
+    
+    def __init__(self):
+        """
+        @pre: -
+        @post: un classement vide de taille 0 a été créé
+        """
+        self.__resultats = []
+        self.__size = 0
+        
+    def size(self):
+        """
+        Méthode accesseur.
+        Retourne la taille de ce classement.
+        @pre:  -
+        @post: Le nombre de résultats actuellement stockés dans ce classement a été retourné.
+        """
+        return self.__size
+    
+    def add(self,*c):
+        """
+        Ajoute un résultat r dans ce classement.
+        @pre:  r est une instance de la classe Resultat
+        @post: Le résultat r a été inséré selon l'ordre du classement.
+               En cas d'ex-aequo, r est inséré après les autres résultats de même ordre.
+        """
+        for r in c:
+            self.__resultats.append(r)
+            self.__resultats = sorted(self.__resultats)
+            self.__resultats.reverse()
+            self.__size += 1
+        
     def get(self,c):
         """
         Retourne le résultat d'un coureur donné.
@@ -86,6 +116,33 @@ class Classement:
         """
         txt = "="*33+"\n"
         for i in range(len(self.__resultats)):
-            txt += "| {0:>2} {1}".format(i,self.__resultats[i])+"\n"
+            txt += "| {0:>2} {1}".format(i+1,self.__resultats[i])+"\n"
         txt += "="*33+"\n"
         return txt
+        
+a = Classement()
+c1 = Coureur("Jhon",20)
+c2 = Coureur("David",100)
+c3 = Coureur("Raimon",50)
+c4 = Coureur("Will",50)
+c5 = Coureur("Marc",63)
+for i in ["AADEL" ,
+"AADI" ,
+"AARON" ,
+"AARONE" ,
+"ZIZ ",
+"AB" ,
+"DEL",
+"ABAS" ,
+"BASS" ,
+"ABASSE" ,
+"ABBAS" ,
+"ABBES" ,
+"ABD" ,
+"ABD-ALLAH" ,
+"ABD-EL" ,
+"ABDALA"]:
+    a.add(Coureur(str(i),50))
+print(a)
+
+
