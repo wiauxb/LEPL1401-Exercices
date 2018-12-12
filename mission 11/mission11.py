@@ -1,3 +1,5 @@
+#Alexandre Winand et Bastien Wiaux
+
 class Coureur:
     
     def __init__(self,nom,score):
@@ -103,7 +105,12 @@ class Classement:
               c est comparé au sens de __eq__. Retourne c si un résultat a été retiré,
               of False si c n'est pas trouvé dans la liste.
         """
-        self.__resultats.remove(c)
+        try:
+            self.__size -= 1
+            return self.__resultats.pop(self.__resultats.index(c))
+        except ValueError:
+            return False
+                
         
 
     def __str__(self):
@@ -126,23 +133,44 @@ c2 = Coureur("David",100)
 c3 = Coureur("Raimon",50)
 c4 = Coureur("Will",50)
 c5 = Coureur("Marc",63)
-for i in ["AADEL" ,
-"AADI" ,
-"AARON" ,
-"AARONE" ,
-"ZIZ ",
-"AB" ,
-"DEL",
-"ABAS" ,
-"BASS" ,
-"ABASSE" ,
-"ABBAS" ,
-"ABBES" ,
-"ABD" ,
-"ABD-ALLAH" ,
-"ABD-EL" ,
-"ABDALA"]:
-    a.add(Coureur(str(i),50))
+a.add(c1,c2,c3,c4,c5)
 print(a)
 
+import unittest
 
+class CalssementTest(unittest.TestCase):
+    """Classe de test utilisé pour tester la classe LinkedList"""
+    
+    def setUp(self):
+        self.clmt = Classement()
+
+    def test_size(self):
+        """Test de la methode size() de la classe Classement."""
+        self.assertEqual(0,self.clmt.size())
+
+    def test_add(self):
+        """Test de la methode add(valeur) de la classe Classement."""
+        self.clmt.add(Coureur("Jhon",50))
+        self.assertEqual(1,self.clmt.size())
+
+    def test_remove(self):
+        """Test de la methode remove() de la classe Classement."""
+        self.clmt.add(Coureur("Jhon",50))
+        self.clmt.remove(Coureur("Jhon",50))
+        self.assertEqual(0,self.clmt.size())
+    
+    def test_get(self):
+        """Test de la methode get() de la classe Classement."""
+        c1 = Coureur("Jhon",20)
+        c2 = Coureur("David",100)
+        c3 = Coureur("Raimon",50)
+        c4 = Coureur("Will",50)
+        c5 = Coureur("Marc",63)
+        self.clmt.add(c1,c2,c3,c4,c5)
+        self.assertEqual(1,self.clmt.get(c2))
+        self.assertEqual(3,self.clmt.get(c3))
+        self.assertEqual(5,self.clmt.get(c1))
+        
+
+if __name__ == '__main__':
+    unittest.main()
