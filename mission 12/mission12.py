@@ -74,7 +74,7 @@ def new_image(width,height,txt,path,name):
                 pass
             else:
                 with Image.open(folder.next(pattern[ligne][case])) as im:
-                    im.thumbnail((wlg,hlg))
+                    im.resize((wlg,hlg))
                     image.paste(im, (wlg*case, ligne*hlg))
         print("")
     image.save(name+".jpeg")
