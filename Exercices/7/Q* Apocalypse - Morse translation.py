@@ -1,6 +1,6 @@
-#Wiaux Bastien
-
-
+# -------------------------------------------
+#   Solution par Wiaux Bastien ( @wiauxb )
+# -------------------------------------------
 def translate(data):
     mots = data.strip().split(" ")
     rep = ""
@@ -16,3 +16,16 @@ def translate(data):
             if not found:
                 raise TypeError("mauvais caractère")
     return rep
+
+# -------------------------------------------
+#   Solution par ( @rverschuren ) 
+# -------------------------------------------
+def translate(data):
+    in_morse = ''
+    for char in data:
+        try:
+            in_morse += morse[char]
+        except KeyError:       
+            raise TypeError('"{}" unregistered character.'.format(char))
+            
+    return in_morse
