@@ -1,5 +1,6 @@
-#Wiaux Bastien
-
+# -------------------------------------------
+#   Solution par Wiaux Bastien ( @wiauxb )
+# -------------------------------------------
 def referee(score_file):
     score = {}
     try:
@@ -17,3 +18,19 @@ def referee(score_file):
         print("y a une erreur")
     except ValueError:
         print("y a une erreur")
+        
+# -------------------------------------------
+#   Solution par ( @rverschuren ) 
+# -------------------------------------------
+ def referee(score_file):
+    with open(score_file, 'r') as f:
+        lines = f.readlines()
+    scores = {lines[0]: 0, lines[1]: 0}
+    for line in lines[2:] :
+        data = line.split()
+        scores[data[0]] = scores.get(data[0],0) + int(data[1])
+        if data[1] == 150:
+               break
+    
+    teams = list(scores.keys())
+    return teams[0] if scores[teams[0]] > scores[teams[1]] else teams[1]
