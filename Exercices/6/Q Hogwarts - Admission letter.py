@@ -1,7 +1,10 @@
-#l'énoncé est mal formulé, il faut savoir ici qu'on doit remplacer # par le name
+#
+# /!\  l'énoncé est mal formulé, il faut savoir ici qu'on doit remplacer # par le name /!\
+#
 
-#Wiaux Bastien
-
+# -------------------------------------------
+#   Solution par Wiaux Bastien ( @wiauxb )
+# -------------------------------------------
 def write(letter_template, name):
     try:
         with open(letter_template, "r") as l:
@@ -14,3 +17,19 @@ def write(letter_template, name):
             f.write(lettre)
     except OSError:
         raise OSError("erreur")
+
+# -------------------------------------------
+#   Solution par ( @rverschuren ) 
+# -------------------------------------------
+def write(letter_template, name):
+    try: 
+        with open(letter_template, 'r') as f:
+            template = f.read()
+        template = template.split('#')
+        output = name.join(template)
+        
+        with open(letter_template, 'w') as f:
+            f.write(output)
+            
+    except Exception as exc:
+        raise OSError("une erreur s'est produite") from exc
