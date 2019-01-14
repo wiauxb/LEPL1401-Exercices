@@ -1,5 +1,6 @@
-#Wiaux Bastien
-
+# -------------------------------------------
+#   Solution par Wiaux Bastien ( @wiauxb )
+# -------------------------------------------
 def get_max(filename):
     nombres = []
     try:
@@ -15,3 +16,24 @@ def get_max(filename):
         nombres = [-1]
     finally:
         return sorted(nombres,reverse = True)[0]
+
+    
+# -------------------------------------------
+#   Solution par ( @rverschuren ) 
+# -------------------------------------------
+def get_max(filename):
+    try : 
+        with open(filename, 'r') as file :
+            lines = file.readlines()
+        maxval = -1
+        for line in lines:
+            try :
+                if float(line.rstrip()) > maxval:
+                    maxval = float(line)
+            except ValueError:
+                continue
+        return maxval    
+
+    except FileNotFoundError:
+        print('Error: Check your file or filepath.')
+        return -1
