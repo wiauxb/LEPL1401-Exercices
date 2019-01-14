@@ -28,8 +28,8 @@ class TexReader():
         self.__brutext = ''.join(sep)
 
     def writeTex(self):
-        with open(Path(os.path.join("..","generated_main.tex")), 'w', 'utf-8') as file:
-            codecs.file.write(self.__brutext)
+        with codecs.open(Path(os.path.join("..","generated_main.tex")), 'w', 'utf-8') as file:
+            file.write(self.__brutext)
 
 
 

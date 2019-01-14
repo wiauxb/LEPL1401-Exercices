@@ -19,9 +19,9 @@ def generateTexSolutions(solutions):
     for solution in solutions:
         t += """
 solution proposée par {0[author]}
-\\begin {{ lstlisting }}[language=python]
+\\begin{{minted}}{{python}}
 {0[code]}
-\\end {{ lstlisting }}\n""".format(solution)
+\\end{{minted}}\n""".format(solution)
 
     return t
 
@@ -34,7 +34,7 @@ def generateTexExercices(exercices):
         f = fr.FileReader(exerc['location'])
 
         t += """
-\\subsection {0[name]}\n
+\\subsection{{ {0[name]} }}\n
 Disponible via ce lien {0[url]}\n""".format(exerc)
         t+= generateTexSolutions(f.getStructured())+"\n"
 
