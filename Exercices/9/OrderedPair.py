@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def set_a(self,n_a):
     self.p.a = n_a

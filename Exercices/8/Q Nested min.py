@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def recursive_min(l):
     min = l[0] if type(l[0]) == int else recursive_min(l[0])
     for i in l:
@@ -10,9 +11,11 @@ def recursive_min(l):
             min = i
     return min
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def recursive_min(l):
     min = None
     for item in l:
@@ -20,4 +23,5 @@ def recursive_min(l):
             item = recursive_min(item)
         if min is None or min > item:
             min = item
+
     return min

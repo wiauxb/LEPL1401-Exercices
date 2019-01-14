@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 moy = None
 sum = 0

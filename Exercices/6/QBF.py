@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def get_max(filename):
     nombres = []
     try:
@@ -18,9 +19,11 @@ def get_max(filename):
         return sorted(nombres,reverse = True)[0]
 
     
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def get_max(filename):
     try : 
         with open(filename, 'r') as file :
@@ -36,4 +39,5 @@ def get_max(filename):
 
     except FileNotFoundError:
         print('Error: Check your file or filepath.')
+
         return -1

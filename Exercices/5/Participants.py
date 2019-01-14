@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def students(course, student_courses):
     rep = []

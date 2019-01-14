@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 import math
 filled_time = 80/11

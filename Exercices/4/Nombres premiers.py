@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def compare(i,prime):
     for a in prime:

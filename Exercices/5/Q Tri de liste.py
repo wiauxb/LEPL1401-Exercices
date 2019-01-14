@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 sorted_list = ["_" for i in range(len(a_list))]
 for i in a_list:
     for j,k in enumerate(sorted_list):
@@ -13,9 +14,11 @@ for i in a_list:
             sorted_list[j] = i
             break
             
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 sorted_list = [a_list[0]]
 for item in a_list[1:] :
     for index, value in enumerate(sorted_list):
@@ -24,4 +27,5 @@ for item in a_list[1:] :
             break
         elif len(sorted_list) == index + 1 :
             sorted_list.append(item)
+
             break

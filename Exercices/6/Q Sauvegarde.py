@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def save_data(filename, life, mana, position_x, position_y):
     with open(filename,"w") as fichier:

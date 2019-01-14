@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def flatten(l):
     if l == []:
         return []
@@ -8,9 +9,11 @@ def flatten(l):
         return flatten(l[0]) + flatten(l[1:])
     return [l[0]] + flatten(l[1:])
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def flatten(l):
     lst = []
     for item in l:
@@ -18,4 +21,5 @@ def flatten(l):
             lst += flatten(item)
         else:
             lst.append(item)
+
     return lst

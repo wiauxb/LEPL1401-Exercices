@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def recursive_min(l):
     min = l[0] if type(l[0]) == int else recursive_min(l[0])

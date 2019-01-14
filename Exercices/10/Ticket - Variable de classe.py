@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def __init__(self) :
     self.__numero = Ticket.__prochain_numero

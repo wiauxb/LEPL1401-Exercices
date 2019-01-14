@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def translate(data):
     mots = data.strip().split(" ")
     rep = ""
@@ -17,9 +18,11 @@ def translate(data):
                 raise TypeError("mauvais caractère")
     return rep
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def translate(data):
     in_morse = ''
     for char in data:
@@ -28,4 +31,5 @@ def translate(data):
         except KeyError:       
             raise TypeError('"{}" unregistered character.'.format(char))
             
+
     return in_morse

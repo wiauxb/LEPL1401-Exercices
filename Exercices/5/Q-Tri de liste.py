@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 sorted_list = ["_" for i in range(len(a_list))]
 for i in a_list:

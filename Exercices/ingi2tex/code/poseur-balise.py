@@ -1,4 +1,9 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
+
+import os
 
 def baliseur(filename):
     t = ""
@@ -38,10 +43,16 @@ def baliseur(filename):
             print("{} ne peut être traité".format(filename))
             return
             
-    print(t)
-    #with open(filename,'w') as f:
-        #f.write(t)
+    with open(filename,'w') as f:
+        f.write(t)
         
             
-            
-baliseur("C:/Users/Wiaux Bastien/Desktop/ecole/unif/BAC 1/Info I/GitHub/Info/Exercices/7/Q Debt reminder.py")
+def scanner(dir):
+    for entry in os.scandir(dir):
+        if not entry.name.startswith('.'):
+            if entry.is_dir():
+                scanner(os.path.join(dir,entry.name))
+            else:
+                baliseur(os.path.join(dir,entry.name))
+                
+scanner("C:/Users/Wiaux Bastien/Desktop/ecole/unif/BAC 1/Info I/GitHub/Info/Exercices")

@@ -1,7 +1,7 @@
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
 def give_money(borrowed_money, from_person, to_person, amount):
     if  not isinstance(borrowed_money, dict)  \
         or not isinstance(from_person, str)   \
@@ -36,9 +36,11 @@ give_money(borrowed_money,"Larry","Linus",5.5)
 give_money(borrowed_money,"Steve","Mark",2000000)
    
 
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def give_money(borrowed_money, from_person, to_person, amount):
         if (type(amount) != float and type(amount) != int)\
         or type(from_person) != str or type(to_person) != str\
@@ -69,4 +71,5 @@ give_money(borrowed_money,"Mark","Steve",2000000)
 give_money(borrowed_money,"Serguei","Bill",5000000)
 give_money(borrowed_money,"Bill","Larry",6000000)
 give_money(borrowed_money,"Larry","Linus",5.5)
+
 give_money(borrowed_money,"Steve","Mark",2000000)

@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def fine(authorized_speed, actual_speed):
     delta = actual_speed - authorized_speed

@@ -4,6 +4,7 @@ import file_reader as fr
 
 def insertAll(args) :
     d = settings.getAllContent()
+    print(d)
     t = generateTexSession(d)
     return t
 
@@ -35,7 +36,7 @@ def generateTexExercices(exercices):
 
         t += """
 \\subsection{{ {0[name]} }}\n
-Disponible via ce lien {0[url]}\n""".format(exerc)
+Disponible via \\href{{{0[url]}}}{{ce lien}}\n""".format(exerc)
         t+= generateTexSolutions(f.getStructured())+"\n"
 
         print(f.getStructured())

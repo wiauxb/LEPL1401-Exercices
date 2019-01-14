@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def table(filename_in, filename_out, width):
     with open(filename_in,"r") as f:

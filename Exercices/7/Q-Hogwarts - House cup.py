@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def winning_house(scroll):
     score = {}
     with open(scroll,'r') as parchemin:
@@ -18,9 +19,11 @@ def winning_house(scroll):
     else:
         return sorted_score[:n]
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------  
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def winning_house(scroll):
     
     def find_students_house(dictionnary, student_name):
@@ -46,4 +49,5 @@ def winning_house(scroll):
     if len(winning['houses']) == 1 : 
         return winning['houses'][0]         # <STRING>
     else : 
+
         return winning['houses'][::-1]      # <LIST>     note: le reverse [::-1] n'est pas utile, mais sans, provoque une erreur Inginious

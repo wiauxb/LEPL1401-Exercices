@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def extract(code):
     rep = []
     for i in code:
@@ -17,9 +18,11 @@ def extract(code):
                 rep[-1]+="-up"
     return " ".join(rep)
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def extract(code):
     
     def upOrLow(char):
@@ -37,4 +40,5 @@ def extract(code):
         else:
             rt_string += 'consonant' + upOrLow(char) 
     return rt_string
+
             

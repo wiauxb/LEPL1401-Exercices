@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def counts(events, n, m):
     matrix = []
     for i in range(n):
@@ -14,9 +15,11 @@ def counts(events, n, m):
         matrix.append(ligne)
     return matrix
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def counts(events, n, m):
     matrix = [ [0 for i in range(n)] for j in range(m)]
     
@@ -24,4 +27,5 @@ def counts(events, n, m):
         i = event[0]
         j = event[1]
         matrix[i][j] += 1
+
     return matrix

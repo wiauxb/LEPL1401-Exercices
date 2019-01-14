@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def create_dictionary(filename):
     lst = []
     with open(filename,'r') as f:
@@ -18,9 +19,11 @@ def create_dictionary(filename):
 def occ(d, word):
     return d.get(word,0)
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
 def create_dictionary(filename):
     d = {}
     with open(filename, 'r') as file :
@@ -30,4 +33,5 @@ def create_dictionary(filename):
     return d
 
 def occ(dictionary, word):
+
     return dictionary.get(word, 0)

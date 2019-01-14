@@ -1,6 +1,7 @@
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 def referee(score_file):
     score = {}
     try:
@@ -19,9 +20,11 @@ def referee(score_file):
     except ValueError:
         print("y a une erreur")
         
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
+
  def referee(score_file):
         
     with open(score_file, 'r') as f:
@@ -35,4 +38,5 @@ def referee(score_file):
                break
     
     teams = list(scores.keys())     # Autre solution: stocker le nom <STR> des equipes pour acceder au score d'une équipe facilement.
+
     return teams[0] if scores[teams[0]] > scores[teams[1]] else teams[1]

@@ -1,4 +1,7 @@
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
+
 
 def house_designation(student_qualities):
     score = {'Gryffindor':0,'Ravenclaw':0,'Hufflepuff':0,'Slytherin':0}
