@@ -1,10 +1,11 @@
 from pathlib import Path
+import os
 import yaml
 
 
 
 def allContributors():
-    filename = Path('../contributors.yml')
+    filename = Path(os.path.join('..','contributors.yml'))
 
     with open(filename, 'r') as file:
             return yaml.load(file.read())
