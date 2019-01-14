@@ -1,11 +1,10 @@
-import fnc_tex
+import fnc_tex, os, re
 from pathlib import Path
-import re
 
 class TexReader():
 
     def __init__ (self):
-        self.__filepath = Path("../main.tex")
+        self.__filepath = Path(os.path.join("..","main.tex"))
         self.__brutext = self.initGetText()
 
     def initGetText(self):
@@ -28,7 +27,7 @@ class TexReader():
         self.__brutext = ''.join(sep)
 
     def writeTex(self):
-        with open(Path("../generated_main.tex"), 'w') as file:
+        with open(Path(os.path.join("..","generated_main.tex")), 'w') as file:
             file.write(self.__brutext)
 
 
