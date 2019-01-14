@@ -2,9 +2,9 @@
 # /!\  l'énoncé est mal formulé, il faut savoir ici qu'on doit remplacer # par le name /!\
 #
 
-# -------------------------------------------
-#   Solution par Wiaux Bastien ( @wiauxb )
-# -------------------------------------------
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
 def write(letter_template, name):
     try:
         with open(letter_template, "r") as l:
@@ -18,9 +18,9 @@ def write(letter_template, name):
     except OSError:
         raise OSError("erreur")
 
-# -------------------------------------------
-#   Solution par ( @rverschuren ) 
-# -------------------------------------------
+#@/----------------
+#   $$author: rverschuren
+#----------------/@#
 def write(letter_template, name):
     try: 
         with open(letter_template, 'r') as f:

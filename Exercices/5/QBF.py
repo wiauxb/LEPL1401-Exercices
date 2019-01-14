@@ -1,6 +1,8 @@
 #INGInious me met faux pour celui-ci mais il me semble que c'est une erreur (par exemple il considère qu'une trace ne se croie pas elle-même
 
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
 
 def matrix_for_traces(l,theta1,theta2):
     matrix = []

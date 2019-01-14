@@ -1,6 +1,8 @@
 #y a surement un moyen plus simple mais j'en avais marre
 
-#Wiaux Bastien
+#@/----------------
+#   $$author: wiauxb
+#----------------/@#
 
 import math as m
 
