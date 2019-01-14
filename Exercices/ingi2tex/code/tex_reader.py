@@ -1,5 +1,6 @@
 import fnc_tex, os, re
 from pathlib import Path
+import codecs
 
 class TexReader():
 
@@ -27,7 +28,7 @@ class TexReader():
         self.__brutext = ''.join(sep)
 
     def writeTex(self):
-        with open(Path(os.path.join("..","generated_main.tex")), 'w') as file:
+        with codecs.open(Path(os.path.join("..","generated_main.tex")), 'w', 'utf-8') as file:
             file.write(self.__brutext)
 
 
