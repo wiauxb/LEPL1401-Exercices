@@ -1,0 +1,11 @@
+
+
+session1:
+  - sessionName: Session 1
+  - name: Median
+    url: https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/Median
+    location: 1/Median.py
+
+  - name: QBF
+    url: https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/QBF01
+    location: 1/QBF.py
