@@ -1,6 +1,5 @@
 from pathlib import Path
-import os
-import yaml
+import os, yaml
 
 
 
