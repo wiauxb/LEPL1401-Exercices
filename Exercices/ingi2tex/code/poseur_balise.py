@@ -47,12 +47,12 @@ def baliseur(filename):
         f.write(t)
         
             
-def scanner(dir):
+def scanner(dir,fct):
     for entry in os.scandir(dir):
         if not entry.name.startswith('.'):
             if entry.is_dir():
-                scanner(os.path.join(dir,entry.name))
+                scanner(os.path.join(dir,entry.name),fct)
             else:
-                baliseur(os.path.join(dir,entry.name))
+                fct(os.path.join(dir,entry.name))
                 
-scanner("C:/Users/Wiaux Bastien/Desktop/ecole/unif/BAC 1/Info I/GitHub/Info/Exercices")
+#scanner("C:/Users/Wiaux Bastien/Desktop/ecole/unif/BAC 1/Info I/GitHub/Info/Exercices",baliseur)
