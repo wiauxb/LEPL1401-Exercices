@@ -1,11 +1,636 @@
-
-
 session1:
   - sessionName: Session 1
+
   - name: Median
-    url: https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/Median
-    location: ../../1/Median.py
+    url: .
+    location: ..\..\1\Median.py
+
+  - name: Q Bathtub with a hole
+    url: .
+    location: ..\..\1\Q Bathtub with a hole.py
+
+  - name: Q Factorial
+    url: .
+    location: ..\..\1\Q Factorial.py
+
+  - name: Q Polynomial
+    url: .
+    location: ..\..\1\Q Polynomial.py
+
+  - name: Q Somme
+    url: .
+    location: ..\..\1\Q Somme.py
+
+  - name: Q-Bathtub with a hole
+    url: .
+    location: ..\..\1\Q-Bathtub with a hole.py
+
+  - name: Q-Factorial
+    url: .
+    location: ..\..\1\Q-Factorial.py
+
+  - name: Q-Polynomial
+    url: .
+    location: ..\..\1\Q-Polynomial.py
 
   - name: QBF
-    url: https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/QBF01
-    location: ../../1/QBF.py
+    url: .
+    location: ..\..\1\QBF.py
+
+
+session10:
+  - sessionName: Session 10
+
+  - name: Q Amazon dispatch center
+    url: .
+    location: ..\..\10\Q Amazon dispatch center.py
+
+  - name: Q Student - init
+    url: .
+    location: ..\..\10\Q Student - init.py
+
+  - name: Q Zoo Game
+    url: .
+    location: ..\..\10\Q Zoo Game.py
+
+  - name: Q-Amazon dispatch center
+    url: .
+    location: ..\..\10\Q-Amazon dispatch center.py
+
+  - name: Q-Student - init
+    url: .
+    location: ..\..\10\Q-Student - init.py
+
+  - name: Q-Zoo Game
+    url: .
+    location: ..\..\10\Q-Zoo Game.py
+
+  - name: QBF
+    url: .
+    location: ..\..\10\QBF.py
+
+  - name: Ticket - Variable de classe
+    url: .
+    location: ..\..\10\Ticket - Variable de classe.py
+
+
+session11:
+  - sessionName: Session 11
+
+  - name: LinkedList - insert
+    url: .
+    location: ..\..\11\LinkedList - insert.py
+
+  - name: LinkedList - remove
+    url: .
+    location: ..\..\11\LinkedList - remove.py
+
+  - name: LinkedList - __init__
+    url: .
+    location: ..\..\11\LinkedList - __init__.py
+
+  - name: Q Double Link
+    url: .
+    location: ..\..\11\Q Double Link.py
+
+  - name: Q LinkedList - remove_from_end
+    url: .
+    location: ..\..\11\Q LinkedList - remove_from_end.py
+
+  - name: Q LinkedList - __str__
+    url: .
+    location: ..\..\11\Q LinkedList - __str__.py
+
+  - name: Q LinkedList
+    url: .
+    location: ..\..\11\Q LinkedList.py
+
+  - name: Q Lost Children
+    url: .
+    location: ..\..\11\Q Lost Children.py
+
+  - name: Q-Double Link
+    url: .
+    location: ..\..\11\Q-Double Link.py
+
+  - name: Q-LinkedList - remove_from_end
+    url: .
+    location: ..\..\11\Q-LinkedList - remove_from_end.py
+
+  - name: Q-LinkedList - __str__
+    url: .
+    location: ..\..\11\Q-LinkedList - __str__.py
+
+  - name: Q-LinkedList
+    url: .
+    location: ..\..\11\Q-LinkedList.py
+
+  - name: Q-Lost Children
+    url: .
+    location: ..\..\11\Q-Lost Children.py
+
+  - name: QBF
+    url: .
+    location: ..\..\11\QBF.py
+
+
+session12:
+  - sessionName: Session 12
+
+  - name: Module Path
+    url: .
+    location: ..\..\12\Module Path.py
+
+  - name: Type de Données Abstrait
+    url: .
+    location: ..\..\12\Type de Données Abstrait.py
+
+
+session2:
+  - sessionName: Session 2
+
+  - name: Nombres premiers
+    url: .
+    location: ..\..\2\Nombres premiers.py
+
+  - name: Q FizzBuzz
+    url: .
+    location: ..\..\2\Q FizzBuzz.py
+
+  - name: Q Interval
+    url: .
+    location: ..\..\2\Q Interval.py
+
+  - name: Q Minimum
+    url: .
+    location: ..\..\2\Q Minimum.py
+
+  - name: Q Reste d'une division entière
+    url: .
+    location: ..\..\2\Q Reste d'une division entière.py
+
+  - name: Q-FizzBuzz
+    url: .
+    location: ..\..\2\Q-FizzBuzz.py
+
+  - name: Q-Interval
+    url: .
+    location: ..\..\2\Q-Interval.py
+
+  - name: Q-Minimum
+    url: .
+    location: ..\..\2\Q-Minimum.py
+
+  - name: Q-Reste d'une division entière
+    url: .
+    location: ..\..\2\Q-Reste d'une division entière.py
+
+  - name: QBF
+    url: .
+    location: ..\..\2\QBF.py
+
+  - name: Somme à compléter
+    url: .
+    location: ..\..\2\Somme à compléter.py
+
+
+session3:
+  - sessionName: Session 3
+
+  - name: Factorial
+    url: .
+    location: ..\..\3\Factorial.py
+
+  - name: Maximum
+    url: .
+    location: ..\..\3\Maximum.py
+
+  - name: Module Math
+    url: .
+    location: ..\..\3\Module Math.py
+
+  - name: Q Amende pour excès de vitesse
+    url: .
+    location: ..\..\3\Q Amende pour excès de vitesse.py
+
+  - name: Q Calcul d'intérêts
+    url: .
+    location: ..\..\3\Q Calcul d'intérêts.py
+
+  - name: Q Equations du second degré
+    url: .
+    location: ..\..\3\Q Equations du second degré.py
+
+  - name: Q Fibonacci
+    url: .
+    location: ..\..\3\Q Fibonacci.py
+
+  - name: Q Indice BMI
+    url: .
+    location: ..\..\3\Q Indice BMI.py
+
+  - name: Q PGCD
+    url: .
+    location: ..\..\3\Q PGCD.py
+
+  - name: Q Plus grand diviseur
+    url: .
+    location: ..\..\3\Q Plus grand diviseur.py
+
+  - name: Q-Amende pour excès de vitesse
+    url: .
+    location: ..\..\3\Q-Amende pour excès de vitesse.py
+
+  - name: Q-Calcul d'intérêts
+    url: .
+    location: ..\..\3\Q-Calcul d'intérêts.py
+
+  - name: Q-Equations du second degré
+    url: .
+    location: ..\..\3\Q-Equations du second degré.py
+
+  - name: Q-Fibonacci
+    url: .
+    location: ..\..\3\Q-Fibonacci.py
+
+  - name: Q-Indice BMI
+    url: .
+    location: ..\..\3\Q-Indice BMI.py
+
+  - name: Q-PGCD
+    url: .
+    location: ..\..\3\Q-PGCD.py
+
+  - name: Q-Plus grand diviseur
+    url: .
+    location: ..\..\3\Q-Plus grand diviseur.py
+
+  - name: QBF
+    url: .
+    location: ..\..\3\QBF.py
+
+
+session4:
+  - sessionName: Session 4
+
+  - name: Hello
+    url: .
+    location: ..\..\4\Hello.py
+
+  - name: Index maximum
+    url: .
+    location: ..\..\4\Index maximum.py
+
+  - name: Listes compréhensions
+    url: .
+    location: ..\..\4\Listes compréhensions.py
+
+  - name: Nombres premiers
+    url: .
+    location: ..\..\4\Nombres premiers.py
+
+  - name: Q Anonymous - Information extraction
+    url: .
+    location: ..\..\4\Q Anonymous - Information extraction.py
+
+  - name: Q Anonymous - Information treatment
+    url: .
+    location: ..\..\4\Q Anonymous - Information treatment.py
+
+  - name: Q Average
+    url: .
+    location: ..\..\4\Q Average.py
+
+  - name: Q Difference counter
+    url: .
+    location: ..\..\4\Q Difference counter.py
+
+  - name: Q Equations du second degré, le retour
+    url: .
+    location: ..\..\4\Q Equations du second degré, le retour.py
+
+  - name: Q Hogwarts - Fat Lady
+    url: .
+    location: ..\..\4\Q Hogwarts - Fat Lady.py
+
+  - name: Q Sum
+    url: .
+    location: ..\..\4\Q Sum.py
+
+  - name: Q-Anonymous - Information extraction
+    url: .
+    location: ..\..\4\Q-Anonymous - Information extraction.py
+
+  - name: Q-Anonymous - Information treatment
+    url: .
+    location: ..\..\4\Q-Anonymous - Information treatment.py
+
+  - name: Q-Average
+    url: .
+    location: ..\..\4\Q-Average.py
+
+  - name: Q-Difference counter
+    url: .
+    location: ..\..\4\Q-Difference counter.py
+
+  - name: Q-Equations du second degré, le retour
+    url: .
+    location: ..\..\4\Q-Equations du second degré, le retour.py
+
+  - name: Q-Hogwarts - Fat Lady
+    url: .
+    location: ..\..\4\Q-Hogwarts - Fat Lady.py
+
+  - name: Q-Sum
+    url: .
+    location: ..\..\4\Q-Sum.py
+
+  - name: QBF
+    url: .
+    location: ..\..\4\QBF.py
+
+  - name: Test de maximum_index
+    url: .
+    location: ..\..\4\Test de maximum_index.py
+
+
+session5:
+  - sessionName: Session 5
+
+  - name: Ajout d'étudiant
+    url: .
+    location: ..\..\5\Ajout d'étudiant.py
+
+  - name: Compteur d'événement
+    url: .
+    location: ..\..\5\Compteur d'événement.py
+
+  - name: Compteur d'événements (Matrice)
+    url: .
+    location: ..\..\5\Compteur d'événements (Matrice).py
+
+  - name: Participants (Matrice)
+    url: .
+    location: ..\..\5\Participants (Matrice).py
+
+  - name: Participants
+    url: .
+    location: ..\..\5\Participants.py
+
+  - name: Q Fusion de listes
+    url: .
+    location: ..\..\5\Q Fusion de listes.py
+
+  - name: Q Hogwarts - Sorting Hat
+    url: .
+    location: ..\..\5\Q Hogwarts - Sorting Hat.py
+
+  - name: Q Tri de liste
+    url: .
+    location: ..\..\5\Q Tri de liste.py
+
+  - name: Q-Fusion de listes
+    url: .
+    location: ..\..\5\Q-Fusion de listes.py
+
+  - name: Q-Hogwarts - Sorting Hat
+    url: .
+    location: ..\..\5\Q-Hogwarts - Sorting Hat.py
+
+  - name: Q-Tri de liste
+    url: .
+    location: ..\..\5\Q-Tri de liste.py
+
+  - name: QBF
+    url: .
+    location: ..\..\5\QBF.py
+
+  - name: Recherche binaire
+    url: .
+    location: ..\..\5\Recherche binaire.py
+
+
+session6:
+  - sessionName: Session 6
+
+  - name: Coordonnées
+    url: .
+    location: ..\..\6\Coordonnées.py
+
+  - name: Manipulation de fichiers
+    url: .
+    location: ..\..\6\Manipulation de fichiers.py
+
+  - name: Q Hogwarts - Admission letter
+    url: .
+    location: ..\..\6\Q Hogwarts - Admission letter.py
+
+  - name: Q Hogwarts - Quidditch
+    url: .
+    location: ..\..\6\Q Hogwarts - Quidditch.py
+
+  - name: Q Représentation de tableau
+    url: .
+    location: ..\..\6\Q Représentation de tableau.py
+
+  - name: Q Sauvegarde
+    url: .
+    location: ..\..\6\Q Sauvegarde.py
+
+  - name: Q-Hogwarts - Quidditch
+    url: .
+    location: ..\..\6\Q-Hogwarts - Quidditch.py
+
+  - name: Q-Représentation de tableau
+    url: .
+    location: ..\..\6\Q-Représentation de tableau.py
+
+  - name: Q-Sauvegarde
+    url: .
+    location: ..\..\6\Q-Sauvegarde.py
+
+  - name: QBF
+    url: .
+    location: ..\..\6\QBF.py
+
+  - name: Traitement d'exceptions
+    url: .
+    location: ..\..\6\Traitement d'exceptions.py
+
+
+session7:
+  - sessionName: Session 7
+
+  - name: Création de dictionnaire des valeurs maximums
+    url: .
+    location: ..\..\7\Création de dictionnaire des valeurs maximums.py
+
+  - name: Création de dictionnaire
+    url: .
+    location: ..\..\7\Création de dictionnaire.py
+
+  - name: Egalité entre structures
+    url: .
+    location: ..\..\7\Egalité entre structures.py
+
+  - name: Q Anonymous - Information collection
+    url: .
+    location: ..\..\7\Q Anonymous - Information collection.py
+
+  - name: Q Apocalypse - Language translation
+    url: .
+    location: ..\..\7\Q Apocalypse - Language translation.py
+
+  - name: Q Apocalypse - Morse translation
+    url: .
+    location: ..\..\7\Q Apocalypse - Morse translation.py
+
+  - name: Q Debt reminder
+    url: .
+    location: ..\..\7\Q Debt reminder.py
+
+  - name: Q Hogwarts - House cup
+    url: .
+    location: ..\..\7\Q Hogwarts - House cup.py
+
+  - name: Q-Anonymous - Information collection
+    url: .
+    location: ..\..\7\Q-Anonymous - Information collection.py
+
+  - name: Q-Apocalypse - Language translation
+    url: .
+    location: ..\..\7\Q-Apocalypse - Language translation.py
+
+  - name: Q-Hogwarts - House cup
+    url: .
+    location: ..\..\7\Q-Hogwarts - House cup.py
+
+  - name: QBF
+    url: .
+    location: ..\..\7\QBF.py
+
+  - name: Texte à Dictionnaire
+    url: .
+    location: ..\..\7\Texte à Dictionnaire.py
+
+  - name: Utilisation des clés
+    url: .
+    location: ..\..\7\Utilisation des clés.py
+
+
+session8:
+  - sessionName: Session 8
+
+  - name: Composition de fonctions
+    url: .
+    location: ..\..\8\Composition de fonctions.py
+
+  - name: Count
+    url: .
+    location: ..\..\8\Count.py
+
+  - name: Flatten lists
+    url: .
+    location: ..\..\8\Flatten lists.py
+
+  - name: High Order - Lambda
+    url: .
+    location: ..\..\8\High Order - Lambda.py
+
+  - name: Map
+    url: .
+    location: ..\..\8\Map.py
+
+  - name: Q Accumulateur
+    url: .
+    location: ..\..\8\Q Accumulateur.py
+
+  - name: Q Deep concatenation
+    url: .
+    location: ..\..\8\Q Deep concatenation.py
+
+  - name: Q High Order - Lambda
+    url: .
+    location: ..\..\8\Q High Order - Lambda.py
+
+  - name: Q Nested min
+    url: .
+    location: ..\..\8\Q Nested min.py
+
+  - name: Q Répétition de fonctions
+    url: .
+    location: ..\..\8\Q Répétition de fonctions.py
+
+  - name: Q Sieve d Eratosthène
+    url: .
+    location: ..\..\8\Q Sieve d Eratosthène.py
+
+  - name: Q-Accumulateur
+    url: .
+    location: ..\..\8\Q-Accumulateur.py
+
+  - name: Q-Deep concatenation
+    url: .
+    location: ..\..\8\Q-Deep concatenation.py
+
+  - name: Q-High Order - Lambda
+    url: .
+    location: ..\..\8\Q-High Order - Lambda.py
+
+  - name: Q-Nested min
+    url: .
+    location: ..\..\8\Q-Nested min.py
+
+  - name: Q-Répétition de fonctions
+    url: .
+    location: ..\..\8\Q-Répétition de fonctions.py
+
+  - name: QBF
+    url: .
+    location: ..\..\8\QBF.py
+
+  - name: Somme
+    url: .
+    location: ..\..\8\Somme.py
+
+
+session9:
+  - sessionName: Session 9
+
+  - name: OrderedPair
+    url: .
+    location: ..\..\9\OrderedPair.py
+
+  - name: Pair.opposite()
+    url: .
+    location: ..\..\9\Pair.opposite().py
+
+  - name: Q Création d'objets depuis des fichiers
+    url: .
+    location: ..\..\9\Q Création d'objets depuis des fichiers.py
+
+  - name: Q SMS Store
+    url: .
+    location: ..\..\9\Q SMS Store.py
+
+  - name: Q-Création d'objets depuis des fichiers
+    url: .
+    location: ..\..\9\Q-Création d'objets depuis des fichiers.py
+
+  - name: Q-SMS Store
+    url: .
+    location: ..\..\9\Q-SMS Store.py
+
+  - name: QBF
+    url: .
+    location: ..\..\9\QBF.py
+
+  - name: Student - init
+    url: .
+    location: ..\..\9\Student - init.py
+
+  - name: __eq__()
+    url: .
+    location: ..\..\9\__eq__().py
+
+

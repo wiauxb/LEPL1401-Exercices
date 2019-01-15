@@ -16,12 +16,12 @@ def generateTexSession(sessions):
 
 def generateTexSolutions(solutions):
     t = ""
-    for solution in solutions:
+    for i,solution in enumerate(solutions):
         t += """
-#### Implémentation {{-}}
+{1}
 ```python
 {0[code]}
-```\n""".format(solution)
+```\n""".format(solution,"#### Implémentation "+str(i+1) if len(solutions)>1 else "")
     return t
 
 
@@ -30,6 +30,6 @@ def generateTexExercices(exercices):
     for exerc in exercices:
         f = fr.FileReader(exerc['location'])
         t += """\n## {0[name]}\n
-Énoncé disponible via [ce lien]({0[url]})\n""".format(exerc)
+{1}\n""".format(exerc,"Énoncé disponible via [ce lien]({0[url]})".format(exerc) if exerc["url"] != "." else "")
         t+= generateTexSolutions(f.getStructured())+"\n"
     return t
