@@ -4,6 +4,7 @@ import file_reader_md as fr
 
 def insertAll(args) :
     d = settings.getAllContent()
+    print(d)
     t = generateTexSession(d)
     return t
 
