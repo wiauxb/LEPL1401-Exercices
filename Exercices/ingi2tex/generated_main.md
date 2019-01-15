@@ -17,8 +17,8 @@ output:
 
 Énoncé disponible via [ce lien](https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/Median)
 
-#### Solution de wiauxb
-```{python}
+#### Implémentation {-}
+```python
 if (a>=b and a<=c) or (a>=c and a<=b):
     median = a
 elif (b>=a and b<=c) or (b>=c and b<=a):
@@ -29,8 +29,8 @@ else:
 
 ```
 
-#### Solution de rverschuren
-```{python}
+#### Implémentation {-}
+```python
 print("test902883")
 print("hih")
 
@@ -41,8 +41,8 @@ print("hih")
 
 Énoncé disponible via [ce lien](https://inginious.info.ucl.ac.be/course/LSINF1101-PYTHON/QBF01)
 
-#### Solution de wiauxb
-```{python}
+#### Implémentation {-}
+```python
 print(s0)
 while s0 != 1:
     if s0%2 == 0:

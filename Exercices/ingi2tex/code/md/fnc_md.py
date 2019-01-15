@@ -18,8 +18,8 @@ def generateTexSolutions(solutions):
     t = ""
     for solution in solutions:
         t += """
-#### Solution de {0[author]}
-```{{python}}
+#### Implémentation {{-}}
+```python
 {0[code]}
 ```\n""".format(solution)
     return t
