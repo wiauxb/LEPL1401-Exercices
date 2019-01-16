@@ -35,7 +35,6 @@ def write_content():
         txt += GenerateSessYML(ses)+"\n"
     with open(os.path.join("..","content.yml"),"w") as f:
         f.write(txt)
-    
-path = input("dossier des exs>")[1:-1]
-poseur_balise.scanner(path,add_content)
+
+poseur_balise.scanner(os.path.join("..",".."),add_content)
 write_content()
